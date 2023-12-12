@@ -1,6 +1,7 @@
 import { useState } from "react"
 import minus from '../../assets/minus.svg'
 import plus from '../../assets/plus.svg'
+import "./TicketCounter.scss"
 
 const TicketCounter = () => {
 
@@ -17,11 +18,11 @@ const TicketCounter = () => {
     }
 
     return (
-        <div>
+        <div className="ticket__counter">
             <h1>Tickets</h1>
-            <img src={minus} alt="minus" onClick={handleDecrement}/>
-            <p>{ticketCount}</p>
-            <img src={plus} alt="minus" onClick={handleIncrement}/>
+            <img className="ticket__counter-symbol" id="minus-symbol" src={minus} alt="minus" onClick={handleDecrement}/>
+            <p className="ticket__counter-count">{ticketCount}</p>
+            <img className="ticket__counter-symbol" id="plus-symbol" src={plus} alt="plus" onClick={handleIncrement}/>
         </div>
     )
 }
