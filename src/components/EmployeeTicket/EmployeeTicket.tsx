@@ -1,10 +1,16 @@
+import TeamMember from "../../types/TeamMember"
 import Counter from "../TicketCounter/TicketCounter"
+import './EmployeeTicket.scss'
 
-const EmployeeTicket = () => {
+type EmployeeProps = {
+    teamMember: TeamMember
+}
+
+const EmployeeTicket = ( {teamMember}: EmployeeProps) => {
     return (
-        <div>
-            <h1>Name</h1>
-            <h1>Role</h1>
+        <div className="employee__ticket">
+            <h1 className="employee__ticket-name">{teamMember.name}</h1>
+            <h1 className="employee__ticket-role">{teamMember.role}</h1>
             <Counter />
         </div>
     )
