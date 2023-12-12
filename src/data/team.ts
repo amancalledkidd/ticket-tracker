@@ -1,4 +1,7 @@
-const team = [
+import TeamMember from "../types/TeamMember";
+
+
+const team: TeamMember[] = [
     {
       id: 1,
       name: "Alima Miller",
