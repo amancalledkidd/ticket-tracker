@@ -1,0 +1,23 @@
+.app {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+
+    .app-heading {
+        text-align: center;
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .app-employee__ticket {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px
+    }
+}

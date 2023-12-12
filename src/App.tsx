@@ -1,22 +1,20 @@
 import './App.scss'
-import TeamMember from './types/TeamMember'
 import team from './data/team'
 import EmployeeTicket from './components/EmployeeTicket/EmployeeTicket'
 
 function App() {
 
-  const testTeamMember: TeamMember = {
-    id: 5,
-    name: "Kumani",
-    role: "Chief Joy officer"
-  }
-
   return (
     <>
       <div className='app'>
-      {team.map(employee => <EmployeeTicket key={employee.id} teamMember={employee} />)}
+        <section>
+          <h1 className='app-heading'> Ticket Tracker</h1>
+        </section>
+        
+        <section className='app-employee__ticket'>
+          {team.map(employee => <EmployeeTicket key={employee.id} teamMember={employee} />)}
+        </section>
       
-      <EmployeeTicket teamMember={testTeamMember}/>
       </div>
     </>
   )
