@@ -1,5 +1,5 @@
 .employee__ticket {
-    background-color: #d8d7d7;
+    background: rgb(255,253,254);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -17,16 +17,11 @@
             margin-top: 0;
             font-weight: bold;
             transition: transform 0.4s;
-
-            &:hover {
-                transform: scale(1.2);
-                color: rgba(0, 56, 241, 0.764);
-            }
         }
 
     .employee__ticket-role {
             font-size: 1em;
-            color: #f55555;
+            color: rgb(18, 111, 210);;
             font-style: italic;
             margin-bottom: 20px;
         }

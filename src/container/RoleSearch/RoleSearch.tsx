@@ -29,8 +29,10 @@ const RoleSearch = ({ team, role, setRole, setSearchName }: RoleSearchProps) => 
 
     return (
         <>
-            <DropdownBox options={filteredRoles} handleOptionSelect={handleRoleSelect}/>
-            {role != 'All' && employeesByRole.map(employee => <EmployeeTicket key={employee.id} teamMember={employee} />)}
+            <DropdownBox label="Role" options={filteredRoles} handleOptionSelect={handleRoleSelect}/>
+            <div className="app__employee-ticket">
+                {role != 'All' && employeesByRole.map(employee => <EmployeeTicket key={employee.id} teamMember={employee} />)}
+            </div>
         </>
     )
 

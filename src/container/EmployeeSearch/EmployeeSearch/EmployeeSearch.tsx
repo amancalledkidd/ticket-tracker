@@ -12,24 +12,28 @@ type EmployeeSearchProps = {
 
 const EmployeeSearch = ({ team, searchName, setSearchName, setRole }: EmployeeSearchProps) => {
     
-
+    // Handles search input and resets Role State
     const handleSearchInput = (event: FormEvent<HTMLInputElement>) => {
         const input = event.currentTarget.value.toLowerCase()
         setSearchName(input)
         setRole('All')
     }
-
+    // Employee
     const employee = team.find(employee => 
         employee.name.toLowerCase().includes(searchName)
     )
 
-    const errorMsg = <p>No employees not found, please check spelling and try again!</p>
+    const errorMsg = <p>No employees found, please check spelling and try again!</p>
 
     return (
         <div>
-            <SearchBox searchedName={searchName} handleSearchInput={handleSearchInput} />
+            <SearchBox label='Employee'searchedName={searchName} handleSearchInput={handleSearchInput} />
 
-            {employee && searchName.length > 0 && <EmployeeTicket teamMember={employee} />}
+            {employee && searchName.length > 0 && 
+                <div className="app__employee-ticket"> 
+                    <EmployeeTicket teamMember={employee} />
+                </div>
+            }
             {!employee && errorMsg}
             
         </div>

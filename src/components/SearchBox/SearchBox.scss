@@ -8,13 +8,12 @@
     background-color: #f8f8f8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     justify-content: center;
-    align-items: center;
 
     .search-box__title {
-        font-size: 1em;
-        color: #333;
-        font-weight: bolder;
-        margin-bottom: 5px;
+        font-size: 16px;
+        color: rgb(0, 123, 255);
+        margin-bottom: 8px;
+        
     }
 
     .search-box__input {

@@ -1,5 +1,5 @@
 import TeamMember from "../../types/TeamMember"
-import Counter from "../TicketCounter/TicketCounter"
+import Counter from "../TicketCounter/Counter"
 import './EmployeeTicket.scss'
 
 type EmployeeProps = {
@@ -11,7 +11,7 @@ const EmployeeTicket = ( {teamMember}: EmployeeProps) => {
         <div className="employee__ticket">
             <h1 className="employee__ticket-name">{teamMember.name}</h1>
             <h1 className="employee__ticket-role">{teamMember.role}</h1>
-            <Counter />
+            <Counter label="Tickets " />
         </div>
     )
 }

@@ -4,14 +4,15 @@ import './SearchBox.scss'
 type SearchBoxProps = {
     searchedName: string
     handleSearchInput: FormEventHandler<HTMLInputElement>
+    label: string;
 }
 
-const SearchBox = ({ searchedName, handleSearchInput}: SearchBoxProps) => {
+const SearchBox = ({label, searchedName, handleSearchInput}: SearchBoxProps) => {
 
     return (
         <div className='search-box'>
             <label className='search-box__title'>
-                Search Employee: 
+                {label} Search: 
             </label>
             
             <input 

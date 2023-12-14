@@ -16,15 +16,15 @@ function App() {
           <h1 className='app-heading'> Ticket Tracker</h1>
         </section>
 
-        <section>
+        <section className='app__employee-search'>
           <EmployeeSearch searchName={searchName} setSearchName={setSearchName} setRole={setRole} team={team} />
         </section>
 
-        <section>
+        <section className='app__role-search'>
           <RoleSearch role={role} setRole={setRole} setSearchName={setSearchName} team={team}/>
         </section>
 
-        <section className='app-employee__ticket'>
+        <section className='app__employee-ticket'>
           {searchName === "" && role === "All" && <EmployeeContainer team={team}/>}
         </section>
 

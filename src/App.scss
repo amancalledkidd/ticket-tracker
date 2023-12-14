@@ -1,5 +1,6 @@
 .app {
-    background-color: #f4f4f4;
+    background: rgb(255,253,254);
+    background: linear-gradient(191deg, rgba(255,253,254,1) 0%, rgba(148,187,233,1) 64%);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -10,14 +11,20 @@
     .app-heading {
         text-align: center;
         font-size: 2em;
-        color: #333;
+        color: #0056b3;
         margin-bottom: 30px;
     }
 
-    .app-employee__ticket {
+    .app__employee-ticket {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 10px
+    }
+    .app__employee-search, .app__role-search {
+        margin-bottom: 10px;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
     }
 }
