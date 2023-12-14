@@ -9,15 +9,15 @@ type CounterProps = {
 
 const Counter = ({ label }: CounterProps) => {
 
-    const [ticketCount, setTicketCount] = useState<number>(0)
+    const [count, setCount] = useState<number>(0)
 
     const handleIncrement = () => {
-        setTicketCount(ticketCount + 1)
+        setCount(count + 1)
     }
 
     const handleDecrement = () => {
-        if (ticketCount > 0) {
-            setTicketCount(ticketCount - 1)
+        if (count > 0) {
+            setCount(count - 1)
         }
     }
 
@@ -25,7 +25,7 @@ const Counter = ({ label }: CounterProps) => {
         <div className="counter">
             <h1>{label}</h1>
             <img className="counter-symbol" id="minus-symbol" src={minus} alt="minus" onClick={handleDecrement}/>
-            <p className="counter-count">{ticketCount}</p>
+            <p className="counter-count">{count}</p>
             <img className="counter-symbol" id="plus-symbol" src={plus} alt="plus" onClick={handleIncrement}/>
         </div>
     )

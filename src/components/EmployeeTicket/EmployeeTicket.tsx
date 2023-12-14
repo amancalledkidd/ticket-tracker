@@ -1,5 +1,5 @@
 import TeamMember from "../../types/TeamMember"
-import Counter from "../TicketCounter/Counter"
+import Counter from "../Counter/Counter"
 import './EmployeeTicket.scss'
 
 type EmployeeProps = {

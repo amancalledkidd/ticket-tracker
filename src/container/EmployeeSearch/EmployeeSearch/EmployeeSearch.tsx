@@ -18,7 +18,7 @@ const EmployeeSearch = ({ team, searchName, setSearchName, setRole }: EmployeeSe
         setSearchName(input)
         setRole('All')
     }
-    // Employee
+    // Employee 
     const employee = team.find(employee => 
         employee.name.toLowerCase().includes(searchName)
     )
