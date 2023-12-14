@@ -1,9 +1,13 @@
 import './App.scss'
 import team from './data/team'
-import EmployeeTicket from './components/EmployeeTicket/EmployeeTicket'
-import EmployeeSearch from './container/EmployeeSearch/EmployeeSearch'
+import EmployeeSearch from './container/EmployeeSearch/EmployeeSearch/EmployeeSearch'
+import EmployeeContainer from './container/EmployeeContainer/EmployeeContainer'
+import RoleSearch from './container/RoleSearch/RoleSearch'
+import { useState } from 'react'
 
 function App() {
+  const [role, setRole] = useState<string>('All')
+  const [searchName, setSearchName] = useState<string>("")
 
   return (
     <>
@@ -13,11 +17,15 @@ function App() {
         </section>
 
         <section>
-          <EmployeeSearch team={team} />
+          <EmployeeSearch searchName={searchName} setSearchName={setSearchName} setRole={setRole} team={team} />
+        </section>
+
+        <section>
+          <RoleSearch role={role} setRole={setRole} setSearchName={setSearchName} team={team}/>
         </section>
 
         <section className='app-employee__ticket'>
-          {team.map(employee => <EmployeeTicket key={employee.id} teamMember={employee} />)}
+          {searchName === "" && role === "All" && <EmployeeContainer team={team}/>}
         </section>
 
       
